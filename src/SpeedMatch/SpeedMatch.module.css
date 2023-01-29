@@ -1,0 +1,13 @@
+
+.main {
+    padding-bottom: 2.5rem;
+    height: 91.7vh;
+    font-family: "Open Sans";
+    background-size: 300% 300%;
+    background:
+        linear-gradient(#05228b, transparent),
+        linear-gradient(to top left, #021145, transparent),
+        linear-gradient(to top right, #232323, transparent);
+        background-blend-mode: screen;
+  }
+  

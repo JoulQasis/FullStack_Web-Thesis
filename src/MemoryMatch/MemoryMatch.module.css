@@ -1,0 +1,90 @@
+.main {
+  padding-bottom: 3rem;
+  height: 91.7vh;
+  font-family: "Open Sans";
+  background-size: 300% 300%;
+  background: linear-gradient(#05228b, transparent),
+    linear-gradient(to top left, #021145, transparent),
+    linear-gradient(to top right, #232323, transparent);
+  background-blend-mode: screen;
+}
+
+.grid {
+  text-align: center;
+  width: 900px;
+  margin: auto;
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.reloadB {
+  float: left;
+  text-align: center;
+  padding-left: 1rem;
+  margin-right: -100px;
+}
+
+.score {
+  text-align: center;
+}
+
+.startbutton {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+.startbutton:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.startbutton:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px) scale(1.1);
+}
+
+.startbutton:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+@media screen and (max-width: 768px) {
+  .reloadB,
+  .reloadB2 {
+    float: left;
+    padding: auto;
+    margin: auto;
+  }
+}
