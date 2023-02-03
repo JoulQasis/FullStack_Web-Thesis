@@ -1,4 +1,5 @@
-.main {
+.main 
+{
   padding-bottom: 3rem;
   height: 91.7vh;
   font-family: "Open Sans";
@@ -9,7 +10,8 @@
   background-blend-mode: screen;
 }
 
-.grid {
+.grid 
+{
   text-align: center;
   width: 900px;
   margin: auto;
@@ -18,18 +20,22 @@
   display: flex;
   flex-wrap: wrap;
 }
-.reloadB {
+
+.reloadB 
+{
   float: left;
   text-align: center;
   padding-left: 1rem;
   margin-right: -100px;
 }
 
-.score {
+.score 
+{
   text-align: center;
 }
 
-.startbutton {
+.startbutton 
+{
   align-items: center;
   appearance: none;
   background-image: radial-gradient(
@@ -64,25 +70,30 @@
   will-change: box-shadow, transform;
   font-size: 18px;
 }
-.startbutton:focus {
+
+.startbutton:focus 
+{
   box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
 }
 
-.startbutton:hover {
+.startbutton:hover 
+{
   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
   transform: translateY(-2px) scale(1.1);
 }
 
-.startbutton:active {
+.startbutton:active 
+{
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
 }
 
-@media screen and (max-width: 768px) {
-  .reloadB,
-  .reloadB2 {
+@media screen and (max-width: 1175px) 
+{
+  .reloadB 
+  {
     float: left;
     padding: auto;
     margin: auto;

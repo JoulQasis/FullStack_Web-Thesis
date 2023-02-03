@@ -3,7 +3,8 @@ import footerCss from "./Footer.module.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { SiFacebook, SiInstagram, SiLinkedin, SiTwitter } from "react-icons/si";
 
-function Footer() {
+function Footer() 
+{
   return (
     <footer className="footer footer-transparent">
       <Container className={footerCss.footer} fluid>

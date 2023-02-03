@@ -2,10 +2,12 @@ import React from "react";
 import MemoryMatchCss from "./MemoryMatch.module.css";
 import { useEffect, useState } from "react";
 
-function MemoryMatch() {
+function MemoryMatch() 
+{
   const [levels, setLevels] = useState(1);
 
-  if (levels === 1) {
+  if (levels === 1) 
+  {
     var cardArray = [
       {
         name: "cat",
@@ -33,7 +35,8 @@ function MemoryMatch() {
         img: require("./img/fries.png"),
       },
     ];
-  } else if (levels === 2) {
+  } else if (levels === 2) 
+  {
     cardArray = [
       {
         name: "cat",
@@ -69,7 +72,8 @@ function MemoryMatch() {
         img: require("./img/bee.png"),
       },
     ];
-  } else {
+  } else 
+  {
     cardArray = [
       {
         name: "cat",
@@ -121,10 +125,13 @@ function MemoryMatch() {
   let cardsChosenIds = [];
   var cardsWon = [];
 
-  useEffect(() => {
+  useEffect(() => 
+  {
     var gridDisplay = document.getElementById("grid");
-    function createBoard() {
-      for (let i = 0; i < cardArray.length; i++) {
+    function createBoard() 
+    {
+      for (let i = 0; i < cardArray.length; i++) 
+      {
         const card = document.createElement("img");
         card.setAttribute("src", require("./img/blank.jpg"));
         card.setAttribute("data-id", i);
@@ -138,7 +145,8 @@ function MemoryMatch() {
     createBoard();
   }, []);
 
-  function startGame() {
+  function startGame() 
+  {
     cardArray.sort(() => 0.5 - Math.random());
     var gameButton = document.getElementById("gameB");
     gameButton.innerText = "Start Game?";
@@ -148,9 +156,12 @@ function MemoryMatch() {
     results.innerHTML = `Level : ${levels} &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Score : ${cardsWon.length}`;
     gridDisplay.innerHTML = " ";
 
-    if (levels === 1) {
-      function createBoard() {
-        for (let i = 0; i < cardArray.length; i++) {
+    if (levels === 1) 
+    {
+      function createBoard() 
+      {
+        for (let i = 0; i < cardArray.length; i++) 
+        {
           const card = document.createElement("img");
           card.setAttribute("src", require("./img/blank.jpg"));
           card.setAttribute("data-id", i);
@@ -161,9 +172,12 @@ function MemoryMatch() {
         }
       }
       createBoard();
-    } else if (levels === 2) {
-      function createBoard2() {
-        for (let i = 0; i < cardArray.length; i++) {
+    } else if (levels === 2) 
+    {
+      function createBoard2() 
+      {
+        for (let i = 0; i < cardArray.length; i++) 
+        {
           const card = document.createElement("img");
           card.setAttribute("src", require("./img/blank.jpg"));
           card.setAttribute("data-id", i);
@@ -174,9 +188,12 @@ function MemoryMatch() {
         }
       }
       createBoard2();
-    } else {
-      function createBoard3() {
-        for (let i = 0; i < cardArray.length; i++) {
+    } else 
+    {
+      function createBoard3() 
+      {
+        for (let i = 0; i < cardArray.length; i++) 
+        {
           const card = document.createElement("img");
           card.setAttribute("src", require("./img/blank.jpg"));
           card.setAttribute("data-id", i);
@@ -190,36 +207,43 @@ function MemoryMatch() {
     }
   }
   // function for flipping a card on a click button.
-  function flipCard() {
+  function flipCard() 
+  {
     const cardId = this.getAttribute("data-id");
     cardsChosen.push(cardArray[cardId].name);
     cardsChosenIds.push(cardId);
     this.setAttribute("src", cardArray[cardId].img);
-    if (cardsChosen.length === 2) {
+    if (cardsChosen.length === 2) 
+    {
       setTimeout(checkMatch, 250);
     }
   }
 
   // checking if the cards are matching
-  function checkMatch() {
+  function checkMatch() 
+  {
     const cards = document.querySelectorAll("#grid img");
-    if (cardsChosenIds[0] === cardsChosenIds[1]) {
+    if (cardsChosenIds[0] === cardsChosenIds[1]) 
+    {
       cards[cardsChosenIds[0]].setAttribute("src", require("./img/blank.jpg"));
       cards[cardsChosenIds[1]].setAttribute("src", require("./img/blank.jpg"));
-    } else if (cardsChosen[0] === cardsChosen[1]) {
+    } else if (cardsChosen[0] === cardsChosen[1]) 
+    {
       cards[cardsChosenIds[0]].setAttribute("src", require("./img/white.png"));
       cards[cardsChosenIds[1]].setAttribute("src", require("./img/white.png"));
       cards[cardsChosenIds[0]].removeEventListener("click", flipCard);
       cards[cardsChosenIds[1]].removeEventListener("click", flipCard);
       cardsWon.push(cardsChosen);
-    } else {
+    } else 
+    {
       cards[cardsChosenIds[0]].setAttribute("src", require("./img/blank.jpg"));
       cards[cardsChosenIds[1]].setAttribute("src", require("./img/blank.jpg"));
     }
     cardsChosen = [];
     cardsChosenIds = [];
 
-    if (cardsWon.length === cardArray.length / 2) {
+    if (cardsWon.length === cardArray.length / 2) 
+    {
       setLevels((levels) => levels + 1);
       var gridDisplay = document.getElementById("grid");
       gridDisplay.innerHTML =

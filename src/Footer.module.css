@@ -1,4 +1,5 @@
-body {
+body 
+{
   position: relative;
   font-family: "Open Sans";
   font-size: larger;
@@ -7,20 +8,23 @@ body {
 
 }
 
-.icon {
+.icon 
+{
   height: 3.2rem;
   width: 3.2rem;
   margin-left: 70px;
 }
-@media screen and (max-width: 1400px){
-  .icon{
+@media screen and (max-width: 1400px)
+{
+  .icon
+  {
     margin-left: auto;
   }
   
 }
 
-
-footer {
+footer 
+{
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -30,9 +34,10 @@ footer {
 
 }
 
-
-@media screen and (max-width: 768px) {
-  footer {
+@media screen and (max-width: 768px) 
+{
+  footer 
+  {
     position: absolute;
     bottom: 0;
     height: auto;

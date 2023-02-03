@@ -3,10 +3,12 @@ import contentCss from "./Content.module.css";
 import { useNavigate } from "react-router-dom";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
-function Content() {
+function Content() 
+{
   const navigate = useNavigate();
-  const navigateToSignUp = () => {
-    // 👇️ navigate to /contacts
+  const navigateToSignUp = () => 
+  {
+    // navigate to /contacts
     navigate("/SignUp");
   };
   return (

@@ -1,7 +1,8 @@
 import Content from "./Content";
-import { Route, Routes, useHistory } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-function App() {
+function App() 
+{
   return (
     <div className="App">
       <Routes>

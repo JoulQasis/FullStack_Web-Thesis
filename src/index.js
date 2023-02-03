@@ -4,12 +4,10 @@ import App from "./App";
 import Mathmatics from "./Math/Mathmatics";
 import Navb from "./Navb";
 import Footer from "./Footer";
-import SpeedMatch from "./SpeedMatch/SpeedMatch";
 import QuickReflexes from "./QuickReflexes/QuickReflexes";
 import MemoryMatch from "./MemoryMatch/MemoryMatch";
 import LogIn from "./LogIn/LogIn";
 import SignUp from "./SignUp/SignUp";
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -21,7 +19,6 @@ root.render(
         <Route exact path="/Mathmatics" element={<Mathmatics />} />
         <Route exact path="/MemoryMatch" element={<MemoryMatch />} />
         <Route exact path="/QuickReflexes" element={<QuickReflexes />} />
-        <Route exact path="/SpeedMatch" element={<SpeedMatch />} />
         <Route exact path="/LogIn" element={<LogIn />} />
         <Route exact path="/SignUp" element={<SignUp />} />
       </Routes>
